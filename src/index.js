@@ -1,12 +1,18 @@
-module.exports = function(size, prefix, ty) {
+module.exports = function(size, prefix, trans) {
     var len;
-    if(typeof size === 'object' && size.size) {
+    if(size && typeof size === 'object' && size.size) {
         len = size.size;
     } else len = typeof size === 'number' ? size : 16;
-    if(typeof size === 'object' && size.prefix) {
+    if(size && typeof size === 'object' && size.prefix) {
         prefix = size.prefix;
     } else prefix = typeof size === 'string' ? size : prefix ? prefix : '';
-    
+    if((size && typeof size === 'object' && size.transform && 
+    (size.transform === 'upper' || size.transform === 'lower')
+    ) || trans && typeof trans == 'string' && (trans === 'upper' || trans === 'lower')) {
+        var transform = function(string) {
+            return size.transform === 'upper' || trans === 'upper' ? string.toUpperCase() : string.toLowerCase();
+        };
+    }
     if(len) {
         var bucket = [
     	    '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 
@@ -17,7 +23,7 @@ module.exports = function(size, prefix, ty) {
             index = Math.floor(Math.random()*62);
             randomString += bucket[index];
         }
-        return randomString;
+        return transform ? transform(randomString) : randomString;
     } else {
         throw new Error("Invalid parameters passed to function");
     }
