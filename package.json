@@ -1,0 +1,19 @@
+{
+  "name": "unique-key",
+  "version": "0.0.1",
+  "description": "Unique key generator module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JamesKator/unique-key.git"
+  },
+  "author": "Kator `kbj` James <kb.james@logicaladdress.com> (https://logicaladdress.com)",
+  "license": "SEE LICENSE IN LICENSE",
+  "bugs": {
+    "url": "https://github.com/JamesKator/unique-key/issues"
+  },
+  "homepage": "https://github.com/JamesKator/unique-key#readme"
+}
