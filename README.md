@@ -15,7 +15,13 @@ uniqueKey('key_');      // key_Y9swzmCrJuhphnfS
 uniqueKey(64, 'pk-');   // pk-EzUXF6tGVcQ1BB7MildOmW3z79tdf5t50JO8qw1pImz76W4icuPol7XcWborLqfj
 
 uniqueKey({
+    size: 36,
+    prefix: 'pk_',
+});                     // pk_SRemDxNIjgzyuFYrHTEYJBeh9WdZbBlTpqup
+
+uniqueKey({
     size: 24,
     prefix: 'sk_',
-    transform: 'lower', // || upper
-});                     // sk_amZQZgjQ4MZ03AcRDELmSELD
+    transform: 'lower', // Optional lower || upper
+});                     // sk_cvwjyzu2zsqsrfhgm9zsclxb
+```
