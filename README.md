@@ -25,3 +25,5 @@ uniqueKey({
     transform: 'lower', // Optional lower || upper
 });                     // sk_cvwjyzu2zsqsrfhgm9zsclxb
 ```
+
+The keys generated are not in any sense unique! You may have to check against a database to ensure uniqueness
