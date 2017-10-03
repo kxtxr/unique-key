@@ -1,6 +1,6 @@
 {
   "name": "unique-key",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Unique key generator module",
   "main": "src/index.js",
   "scripts": {

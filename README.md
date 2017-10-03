@@ -30,10 +30,11 @@ uniqueKey({
 });                     // pk_SRemDxNIjgzyuFYrHTEYJBeh9WdZbBlTpqup
 
 uniqueKey({
-    size: 24,
-    prefix: 'sk_',
-    transform: 'lower', // Optional lower || upper
-});                     // sk_cvwjyzu2zsqsrfhgm9zsclxb
+    size: 24,               // Optional size of key to geneate. Default is 16
+    prefix: 'sk_',          // Optional
+    charType: 'alphanum',   // Optional numeric || alphanum (default) || alpha
+    transform: 'lower',     // Optional lower || upper
+});                         // sk_cvwjyzu2zsqsrfhgm9zsclxb
 ```
 
 The keys generated are not in any sense unique! You may have to check against a database to ensure uniqueness
